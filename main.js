@@ -6,13 +6,28 @@ const factBoxListener = () => {
   }
 };
 
-// burn after reading
-const presentation = () => {
-  root.innerHTML = 'Element som presenterer data om dysleksi basert på <a href="https://dysleksinorge.no/statistikk-laerevansker/">statistikk for lærevansker</a>';
-  root.style.background = 'gold';
-  root.style.padding = '2em';
-  console.log('...');
+const setupCategoryButtons = () => {
+  const buttons = document.querySelectorAll('.button-container button');
+  const containers = {
+    dysleksi: document.querySelector('.image-container-dysleksi'),
+    matematikk: document.querySelector('.image-container-matematikk'),
+    DLD: document.querySelector('.image-container-DLD')
+  };
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.target;
+      Object.keys(containers).forEach(key => {
+        containers[key].style.display = key === target ? 'block' : 'none';
+      });
+    });
+  });
+
+
+  if (buttons.length > 0) {
+    buttons[0].click();
+  }
 };
 
 factBoxListener();
-presentation();
+setupCategoryButtons();
