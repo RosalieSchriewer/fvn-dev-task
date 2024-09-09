@@ -10,7 +10,7 @@ const setupCategoryButtons = () => {
   const buttons = document.querySelectorAll('.button-container button');
   const containers = {
     dysleksi: document.querySelector('.image-container-dysleksi'),
-    matematikk: document.querySelector('.image-container-matematikk'),
+    dyskalkuli: document.querySelector('.image-container-dyskalkuli'),
     DLD: document.querySelector('.image-container-DLD')
   };
 

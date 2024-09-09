@@ -6,6 +6,79 @@
   --color-line: #e0e0e0;
   --color-primary: #0071d5;
 }
+#root{
+  margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    text-align: center;
+    max-width: 800px;
+}
+
+button{
+opacity: 1; 
+padding: 10px 15px; 
+margin: 0px 0px 16px; 
+border-width: 2px; 
+border-color: rgb(6, 26, 87); 
+border-radius: 20px; 
+border-style: solid; 
+font-size: 16px; 
+font-weight: 700; 
+color: rgb(255, 255, 255); 
+font-family: arial, helvetica, sans-serif; 
+width: auto; 
+background: rgb(6, 26, 87);
+}
+button:hover{
+  opacity: 1; 
+  padding: 10px 15px; 
+  margin: 0px 0px 16px; 
+  border-width: 2px; 
+  border-color: rgb(6, 26, 87); 
+  border-radius: 20px; 
+  border-style: solid; 
+  font-size: 16px; 
+  font-weight: 700; 
+  color: rgb(6, 26, 87); 
+  font-family: arial, helvetica, sans-serif; 
+  width: auto; 
+  background: rgb(255, 255, 255); 
+  }
+
+  .image-container-dysleksi,
+  .image-container-dyskalkuli,
+  .image-container-DLD {
+    display: inline-block;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 2em;
+  }
+
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.image-item figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+  text-align: center;
+}
+
+
+
+
 
 body>header {
   box-sizing: border-box;
