@@ -51,14 +51,18 @@ button:hover {
 .image-container-dyskalkuli,
 .image-container-DLD {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  padding: 2em;
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 40px;
+  padding: 1em;
+  margin-bottom: 2em;
+  justify-items: center;
 }
 
-figure {
-  margin: 0;
-  text-align: center;
+.image-container-dysleksi canvas,
+.image-container-dyskalkuli canvas,
+.image-container-DLD canvas {
+  min-width: 100%;
+  max-height: 10em;
 }
 
 figcaption {
@@ -203,6 +207,9 @@ body > article {
 @media screen and (max-width: 700px) {
   body > article {
     font-size: 12px;
+  }
+  figcaption {
+    font-size: 16px;
   }
 }
 
