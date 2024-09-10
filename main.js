@@ -148,10 +148,6 @@ const observer = new IntersectionObserver(handleIntersection, {
   threshold: 0.1,
 });
 
-document.querySelectorAll("canvas").forEach((canvas) => {
-  observer.observe(canvas);
-});
-
 const setupCategoryButtons = () => {
   const buttons = document.querySelectorAll(".button-container button");
   const containers = {
@@ -167,6 +163,9 @@ const setupCategoryButtons = () => {
         containers[key].style.display = key === target ? "grid" : "none";
       });
 
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
       containers[target].querySelectorAll("canvas").forEach((canvas) => {
         observer.observe(canvas);
       });
@@ -174,7 +173,8 @@ const setupCategoryButtons = () => {
   });
 
   if (buttons.length > 0) {
-    buttons[0].click();
+    const firstButton = buttons[0];
+    firstButton.click();
   }
 };
 
