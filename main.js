@@ -18,7 +18,7 @@ const setupCategoryButtons = () => {
     button.addEventListener('click', () => {
       const target = button.dataset.target;
       Object.keys(containers).forEach(key => {
-        containers[key].style.display = key === target ? 'block' : 'none';
+        containers[key].style.display = key === target ? 'grid' : 'none';
       });
     });
   });

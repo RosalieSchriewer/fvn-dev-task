@@ -6,81 +6,70 @@
   --color-line: #e0e0e0;
   --color-primary: #0071d5;
 }
-#root{
+#root {
   margin-top: 20px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 10px;
-    text-align: center;
-    max-width: 800px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  text-align: center;
+  max-width: 800px;
 }
 
-button{
-opacity: 1; 
-padding: 10px 15px; 
-margin: 0px 0px 16px; 
-border-width: 2px; 
-border-color: rgb(6, 26, 87); 
-border-radius: 20px; 
-border-style: solid; 
-font-size: 16px; 
-font-weight: 700; 
-color: rgb(255, 255, 255); 
-font-family: arial, helvetica, sans-serif; 
-width: auto; 
-background: rgb(6, 26, 87);
+button {
+  opacity: 1;
+  padding: 10px 15px;
+  margin: 0px 0px 16px;
+  border-width: 2px;
+  border-color: rgb(6, 26, 87);
+  border-radius: 20px;
+  border-style: solid;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-family: arial, helvetica, sans-serif;
+  width: auto;
+  background: rgb(6, 26, 87);
 }
-button:hover{
-  opacity: 1; 
-  padding: 10px 15px; 
-  margin: 0px 0px 16px; 
-  border-width: 2px; 
-  border-color: rgb(6, 26, 87); 
-  border-radius: 20px; 
-  border-style: solid; 
-  font-size: 16px; 
-  font-weight: 700; 
-  color: rgb(6, 26, 87); 
-  font-family: arial, helvetica, sans-serif; 
-  width: auto; 
-  background: rgb(255, 255, 255); 
-  }
-
-  .image-container-dysleksi,
-  .image-container-dyskalkuli,
-  .image-container-DLD {
-    display: inline-block;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 2em;
-  }
-
-
-.image-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+button:hover {
+  opacity: 1;
+  padding: 10px 15px;
+  margin: 0px 0px 16px;
+  border-width: 2px;
+  border-color: rgb(6, 26, 87);
+  border-radius: 20px;
+  border-style: solid;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(6, 26, 87);
+  font-family: arial, helvetica, sans-serif;
+  width: auto;
+  background: rgb(255, 255, 255);
 }
 
-.image-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.image-container-dysleksi,
+.image-container-dyskalkuli,
+.image-container-DLD {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 2em;
+  grid-gap: 10px;
 }
 
-.image-item figcaption {
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
   font-size: 0.9em;
   color: #555;
   margin-top: 5px;
   text-align: center;
+  grid-row: 2;
 }
 
-
-
-
-
-body>header {
+body > header {
   box-sizing: border-box;
   width: 100%;
   position: absolute;
@@ -90,74 +79,75 @@ body>header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em 0
+  padding: 1em 0;
 }
 
 header .logo {
   fill: var(--color-text);
   stroke: none;
   height: 1.75em;
-  width: auto
+  width: auto;
 }
 
-body>article>.media .caption,
-body>article>.standard,
-body>article>.text.time {
+body > article > .media .caption,
+body > article > .standard,
+body > article > .text.time {
   width: 640px;
   max-width: calc(100% - 3rem);
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
-body>article>.extended {
+body > article > .extended {
   width: 864px;
   max-width: 100%;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
-@media screen and (max-width:700px) {
-  body>article>.extended.padded {
+@media screen and (max-width: 700px) {
+  body > article > .extended.padded {
     padding-left: 1.5rem;
-    padding-right: 1.5rem
+    padding-right: 1.5rem;
   }
 }
 
-@media screen and (min-width:701px) {
-  body>article>.extended.padded {
+@media screen and (min-width: 701px) {
+  body > article > .extended.padded {
     padding-left: 112px;
-    padding-right: 112px
+    padding-right: 112px;
   }
 }
 
-@media screen and (max-width:700px) {
-  body>article>.extended.max-width {
-    max-width: calc(100% - 3rem)
+@media screen and (max-width: 700px) {
+  body > article > .extended.max-width {
+    max-width: calc(100% - 3rem);
   }
 }
 
-body>article .text.label {
-  font-size: .8rem;
+body > article .text.label {
+  font-size: 0.8rem;
   line-height: 1.3;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
   margin-top: 5rem;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
-@media screen and (max-width:700px) {
-  body>article .text.label {
-    font-size: .65rem
+@media screen and (max-width: 700px) {
+  body > article .text.label {
+    font-size: 0.65rem;
   }
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px
+  font-size: 16px;
 }
 
 body,
@@ -168,171 +158,173 @@ hr,
 html,
 p {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 h1,
 h2 {
   font-size: 100%;
-  font-weight: 900
+  font-weight: 900;
 }
 
 html {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 *,
 :after,
 :before {
-  box-sizing: inherit
+  box-sizing: inherit;
 }
 
 img {
   margin: 0;
   height: auto;
-  max-width: 100%
+  max-width: 100%;
 }
 
-body>header {
+body > header {
   pointer-events: all;
-  visibility: visible
+  visibility: visible;
 }
 
-body>article {
+body > article {
   font-size: 16px;
   color: var(--color-text);
   margin: 0 auto;
   width: var(--max-width);
   max-width: 100%;
   opacity: 0;
-  transition: opacity .2s linear;
+  transition: opacity 0.2s linear;
   padding: 0 0 6em;
-  line-height: 1.65
+  line-height: 1.65;
 }
 
-@media screen and (max-width:700px) {
-  body>article {
-    font-size: 12px
+@media screen and (max-width: 700px) {
+  body > article {
+    font-size: 12px;
   }
 }
 
-body>article.ready {
-  opacity: 1
+body > article.ready {
+  opacity: 1;
 }
 
-body>article>:first-child {
-  padding-top: 6rem
+body > article > :first-child {
+  padding-top: 6rem;
 }
 
-body>article>* {
-  margin: 0 auto 1.5rem
+body > article > * {
+  margin: 0 auto 1.5rem;
 }
 
-body>article h2 {
-  font-weight: 900
+body > article h2 {
+  font-weight: 900;
 }
 
-body>article>hr:empty {
+body > article > hr:empty {
   border-top: 1px solid var(--color-line);
   display: block;
-  margin: 2rem auto
+  margin: 2rem auto;
 }
 
-body>article>.text {
+body > article > .text {
   font-size: 1.3em;
   font-weight: 400;
-  line-height: 1.55
+  line-height: 1.55;
 }
 
-body>article>.text.headline {
+body > article > .text.headline {
   font-weight: 900;
   font-size: 3.5em;
   margin: 0 auto;
   text-align: center;
   margin: 2rem auto;
-  line-height: 1
+  line-height: 1;
 }
 
-@media screen and (max-width:700px) {
-  body>article>.text.headline {
-    font-size: 3em
+@media screen and (max-width: 700px) {
+  body > article > .text.headline {
+    font-size: 3em;
   }
 }
 
-body>article>.text.lead {
+body > article > .text.lead {
   font-size: 1.65em;
   text-align: center;
   line-height: 1.35;
-  font-weight: 800
+  font-weight: 800;
 }
 
-body>article>.text.lead+.text {
-  margin-top: 3rem
+body > article > .text.lead + .text {
+  margin-top: 3rem;
 }
 
-body>article>.text.byline {
+body > article > .text.byline {
   font-size: 90%;
-  line-height: 1.3
+  line-height: 1.3;
 }
 
-body>article>.text.byline.plain {
+body > article > .text.byline.plain {
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .025rem;
+  letter-spacing: 0.025rem;
   text-align: center;
-  margin-bottom: .65em
+  margin-bottom: 0.65em;
 }
 
-body>article>.text.byline.plain:before {
+body > article > .text.byline.plain:before {
   content: "Av ";
   font-weight: 300;
-  text-transform: none
+  text-transform: none;
 }
 
-body>article>.text.time {
+body > article > .text.time {
   text-align: center;
   font-size: 90%;
-  margin-top: -.5rem;
-  opacity: .5
+  margin-top: -0.5rem;
+  opacity: 0.5;
 }
 
-body>article .text.caption {
+body > article .text.caption {
   text-align: center;
-  margin: .5rem auto 2rem;
+  margin: 0.5rem auto 2rem;
   font-size: 1em;
   line-height: 1.4;
-  opacity: .65
+  opacity: 0.65;
 }
 
-body>article .text.caption span:before {
+body > article .text.caption span:before {
   content: "Foto ";
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: .035rem;
-  font-size: 80%
+  letter-spacing: 0.035rem;
+  font-size: 80%;
 }
 
-body>article .fact {
+body > article .fact {
   position: relative;
   margin: 2rem auto;
   font-size: 1em;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-left: 6px solid var(--color-primary);
-  box-shadow: 0 8px 12px 1px rgba(51, 51, 51, .04), 0 3px 16px 2px rgba(51, 51, 51, .08), 0 5px 10px -3px rgba(51, 51, 51, .08);
+  box-shadow: 0 8px 12px 1px rgba(51, 51, 51, 0.04),
+    0 3px 16px 2px rgba(51, 51, 51, 0.08),
+    0 5px 10px -3px rgba(51, 51, 51, 0.08);
   overflow: hidden;
   cursor: pointer;
   user-select: none;
 }
 
-body>article .fact header {
+body > article .fact header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  pointer-events: none
+  pointer-events: none;
 }
 
-body>article .fact header:after {
+body > article .fact header:after {
   content: "Ekspander \2193";
   text-transform: uppercase;
   font-weight: 500;
@@ -340,223 +332,223 @@ body>article .fact header:after {
   letter-spacing: 1px;
   color: var(--color-primary);
   white-space: nowrap;
-  cursor: pointer
+  cursor: pointer;
 }
 
-body>article .fact .collapsed {
+body > article .fact .collapsed {
   padding-top: 1rem;
-  display: none
+  display: none;
 }
 
-body>article .fact.expanded .collapsed {
+body > article .fact.expanded .collapsed {
   display: block;
 }
 
-@media screen and (max-width:700px) {
-  body>article .fact.padded {
-    padding: 1.5rem
+@media screen and (max-width: 700px) {
+  body > article .fact.padded {
+    padding: 1.5rem;
   }
 
-  body>article .fact.padded header:after {
-    font-size: 80%
+  body > article .fact.padded header:after {
+    font-size: 80%;
   }
 }
 
-body>article .fact h2 {
+body > article .fact h2 {
   font-weight: 700;
   padding-right: 1em;
   line-height: 1.3;
-  font-size: 1.3em
+  font-size: 1.3em;
 }
 
-body>article .fact p {
-  margin-bottom: .5rem;
-  font-size: 1.1em
+body > article .fact p {
+  margin-bottom: 0.5rem;
+  font-size: 1.1em;
 }
 
-body>article>.media {
+body > article > .media {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 2rem auto
+  margin: 2rem auto;
 }
 
-body>article>.media section {
+body > article > .media section {
   width: 100%;
   margin: 0 auto;
-  text-align: center
+  text-align: center;
 }
 
-body>article>.media section img {
+body > article > .media section img {
   width: 100%;
   height: auto;
   opacity: 0;
-  transition: opacity .2s linear
+  transition: opacity 0.2s linear;
 }
 
-body>article>.media section.small-image .placeholder {
-  display: none
+body > article > .media section.small-image .placeholder {
+  display: none;
 }
 
-body>article>.media section.small-image img {
-  width: auto
+body > article > .media section.small-image img {
+  width: auto;
 }
 
-body>article>.media section.loaded img {
-  opacity: 1
+body > article > .media section.loaded img {
+  opacity: 1;
 }
 
-body>article>.media.portrait {
+body > article > .media.portrait {
   overflow: hidden;
   flex-direction: row;
   align-items: center;
-  background: rgba(0, 0, 0, .075)
+  background: rgba(0, 0, 0, 0.075);
 }
 
-body>article>.media.portrait section {
+body > article > .media.portrait section {
   flex: 0 0 50%;
-  margin: 0
+  margin: 0;
 }
 
-body>article>.media.portrait section.small-image {
+body > article > .media.portrait section.small-image {
   flex: 0 1 auto;
   width: auto;
   padding-bottom: 0 !important;
-  height: auto !important
+  height: auto !important;
 }
 
-body>article>.media.portrait .text {
+body > article > .media.portrait .text {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center
+  justify-content: center;
 }
 
-body>article>.media.portrait .text span {
-  margin-top: .5rem
+body > article > .media.portrait .text span {
+  margin-top: 0.5rem;
 }
 
-body>article>.media.wide {
-  width: 865.35px
+body > article > .media.wide {
+  width: 865.35px;
 }
 
-body>article>.media.extreme,
-body>article>.media.first-media {
+body > article > .media.extreme,
+body > article > .media.first-media {
   padding-left: 0;
   padding-right: 0;
   margin: 0 auto 2rem;
-  width: 100%
+  width: 100%;
 }
 
-body>article>.media .caption {
-  margin-bottom: .5rem
+body > article > .media .caption {
+  margin-bottom: 0.5rem;
 }
 
-body>article .whoIsWho {
+body > article .whoIsWho {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: center;
   margin: 3rem auto;
-  position: relative
+  position: relative;
 }
 
-body>article .whoIsWho figure {
+body > article .whoIsWho figure {
   width: 25%;
   min-width: 25%;
-  margin-right: 1rem
+  margin-right: 1rem;
 }
 
-body>article .whoIsWho figure section {
+body > article .whoIsWho figure section {
   width: 100%;
   height: 0;
   padding-bottom: 100% !important;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid var(--color-line);
-  filter: grayscale(1)
+  filter: grayscale(1);
 }
 
-body>article .whoIsWho figure section img {
+body > article .whoIsWho figure section img {
   width: 100%;
   height: 100%;
   min-height: 100%;
   object-fit: cover;
-  position: absolute !important
+  position: absolute !important;
 }
 
-body>article .whoIsWho+.whoiswho {
+body > article .whoIsWho + .whoiswho {
   margin-top: -1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--color-line)
+  border-top: 1px solid var(--color-line);
 }
 
-body>article .whoIsWho figcaption {
-  display: none
+body > article .whoIsWho figcaption {
+  display: none;
 }
 
-body>article>.text+.media {
-  margin-top: 4.5em
+body > article > .text + .media {
+  margin-top: 4.5em;
 }
 
-body>article>.media+.text {
-  padding-top: .75rem
+body > article > .media + .text {
+  padding-top: 0.75rem;
 }
 
-body>article .media section {
-  position: relative
-}
-
-body>article .media section.has-placeholder {
+body > article .media section {
   position: relative;
-  overflow: hidden
 }
 
-body>article .media section.has-placeholder .media {
-  transition: opacity .5s linear;
+body > article .media section.has-placeholder {
+  position: relative;
+  overflow: hidden;
+}
+
+body > article .media section.has-placeholder .media {
+  transition: opacity 0.5s linear;
   opacity: 0;
   position: relative;
-  z-index: 1
+  z-index: 1;
 }
 
-body>article .media section.has-placeholder .media.placeholder {
+body > article .media section.has-placeholder .media.placeholder {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate3d(-50%, 0, 0) scale(1.15);
-  transition: all .5s cubic-bezier(1, 0, 0, 0);
+  transition: all 0.5s cubic-bezier(1, 0, 0, 0);
   filter: blur(20px);
   opacity: 1;
-  z-index: 0
+  z-index: 0;
 }
 
-body>article .media section.has-placeholder.loaded .media {
-  opacity: 1
+body > article .media section.has-placeholder.loaded .media {
+  opacity: 1;
 }
 
-body>article .published {
+body > article .published {
   display: flex;
   flex-direction: column;
   font-size: 80%;
   padding-top: 2rem;
   margin-top: 2rem;
-  border-top: 1px solid var(--color-line)
+  border-top: 1px solid var(--color-line);
 }
 
-body>article .published label {
-  font-weight: 600
+body > article .published label {
+  font-weight: 600;
 }
 
-body>article>.first-content {
-  margin-top: calc(3em / 2)
+body > article > .first-content {
+  margin-top: calc(3em / 2);
 }
 
-body>article>.extreme {
+body > article > .extreme {
   padding-left: 0;
   padding-right: 0;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 100% !important
+  max-width: 100% !important;
 }
